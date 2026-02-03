@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -166,7 +165,7 @@
 
     <h1>🎉 Happy Birthday, banunaayyy! 🎂</h1>
 
-    <img src="image/nunay.png" alt="Us together 💜" class="photo" />
+    <img src="image/nunay.jpg" alt="Us together 💜" class="photo" />
 
     <p>
       Dear bebe,<br><br>
@@ -202,4 +201,6 @@
   </script>
 </body>
 </html>
+
+
 
