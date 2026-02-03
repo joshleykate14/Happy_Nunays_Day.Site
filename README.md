@@ -15,7 +15,7 @@
       text-align: center;
     }
 
-    /* FLOATING EMOJIS */
+  /* FLOATING EMOJIS */
     .float {
       position: fixed;
       font-size: 24px;
@@ -27,7 +27,7 @@
       to { transform: translateY(-10vh); }
     }
 
-    /* LOCK SECTION */
+  /* LOCK SECTION */
     #lock {
       background: #ffffffee;
       max-width: 600px;
@@ -38,7 +38,7 @@
       text-align: center;
     }
 
-    #lock h2 {
+  #lock h2 {
       font-weight: 900;
       font-size: 28px;
       margin-bottom: 15px;
@@ -48,13 +48,13 @@
       gap: 10px;
     }
 
-    #lock p.prompt {
+  #lock p.prompt {
       font-weight: 700;
       font-size: 20px;
       margin-bottom: 20px;
     }
 
-    #password {
+  #password {
       width: 80%;
       max-width: 320px;
       padding: 14px 20px;
@@ -69,7 +69,7 @@
       box-shadow: 0 0 8px 2px #9d4edd;
     }
 
-    button {
+  button {
       margin-top: 25px;
       padding: 14px 40px;
       font-size: 18px;
@@ -85,14 +85,14 @@
       background-color: #7b2cbf;
     }
 
-    #error {
+  #error {
       margin-top: 18px;
       color: red;
       font-weight: 700;
       min-height: 24px;
     }
 
-    /* CONTENT SECTION (LANDSCAPE CARD) */
+  /* CONTENT SECTION (LANDSCAPE CARD) */
     #content {
       display: none;
       background: #ffffffee;
@@ -107,13 +107,13 @@
       color: #4a145a;
     }
 
-    /* DECOR */
+  /* DECOR */
     .decor {
       font-size: 28px;
       margin: 15px 0;
     }
 
-    /* IMAGE */
+  /* IMAGE */
     .photo {
       max-width: 600px;
       width: 100%;
@@ -124,7 +124,7 @@
       display: block;
     }
 
-    /* MESSAGE */
+  /* MESSAGE */
     p {
       text-align: justify;
       line-height: 1.6;
@@ -133,7 +133,7 @@
       font-size: 16px;
     }
 
-    h1 {
+  h1 {
       color: #6a0dad;
       margin-bottom: 20px;
     }
@@ -142,7 +142,7 @@
 </head>
 <body>
 
-  <!-- FLOATING DECOR -->
+ <!-- FLOATING DECOR -->
   <div class="float" style="left:10%;">💜</div>
   <div class="float" style="left:30%; animation-delay:2s;">🦋</div>
   <div class="float" style="left:50%; animation-delay:4s;">🌸</div>
@@ -163,27 +163,27 @@
   <div id="content">
     <div class="decor">💜🦋🌸💖🦋🌸💜</div>
 
-    <h1>🎉 Happy Birthday, banunaayyy! 🎂</h1>
+   <h1>🎉 Happy Birthday, banunaayyy! 🎂</h1>
 
-    <img src="image/nunay.jpg" alt="Us together 💜" class="photo" />
+  <img src="image/nunay.jpg" alt="Us together 💜" class="photo" />
 
-    <p>
+  <p>
       Dear bebe,<br><br>
       I made this website just for you because you are an amzing cousin and best sister i've ever had in my entire life. Entire life kasi dko bati si juls hahahah. Sorry if late na ako nkapag send sayo ng gift. I hope ma aapreciate mo tong ginawa ko hehe. 🤭 I miss youu so muchh nunay koo. I hope you have a very nice day and happy life in there, na kikita ko nmn na masaya ka jn, and if nkakakafeel ka ng lonelyness, don't hesitate to chat or call me. Maliban nlg pag wala me load haha. Anyways, happy birthday again, nunayy. Legal age kna, sana pwede kna mag inom hahahhaha. Ay pwede na pla. I hope na enjoy mo ung araw mo, walang celebration jn, feel ko tuloy dto mo iceceleb 18th mo. Kung mangyari man yon, I can't wait na mka uwi kna and mka bonding na ulit tayo. Ang dami kong ikkwento sayo kahit dko na chichika sayo in chat hahahaha. I miss our bonding and the night you flew away, i realize na ano nlg ung reason pag uuwi ako ng buco? hahaha letche na iiyak ako wtf. 🤧 I put an effort to this gift because i want to prove it to you na may na tututunan ako HAHAHAHHA eme lg. Kase dba what if, kunin mo ako dba. 1yr nlg oh graduated na ako ng Bachelor of Science Information Technology or should i say BSIT. Sheesshhh. Na parang bang ang talino ko na nyan HAHAHAHAH. Once na umuwi ka iiyak ako, d ako aalis sa tabi mo hahahaha. Takte na mimiss na tlga kita, nung nag vm ka saken non, totoo yon, nung na rinig ko boses mo na iyak ako. Kase takte ang bilis. Mag 2 yrs na agd kayo or mag 3 dko na alm. Ang bilis ng panahon. I hope u guys are okay in there. I'm so happy when i see you happy, you can do the things na hindi mo pa na gagawa here sa Philippines and enjoying the world, the place. I'm so proud of you, kahit hindi ko na kikita mga ginagawa mo. Na pproud pa ako lalo kase parang dati lg na hihiya kpa makipag usap ganon ganon sa ibang tao, pero ngayon, hays, madaldal na. Na aalala mo yon ung pinakanta tayong dalawa kase kesyo maganda dw boses nten HAHAHAHAH letche ang cringe. Tapos hindi pwedeng hindi tayo mag kaparehas ng damit. Couple dress pa yarn hahahahha. Pero okay na din yan, naging successful na din sila tita ilyn, and na kuha kayo. I love you always, bebe. Mag ingat kayo always. Stay gullible and humble. Iwasan ang pagiging attitude, kase hindi bagay sayo, like literal. Wag muna mag boyfriend. 😘❤️
       <br><br>💖  
       You’re an amazing cousin and I’m so grateful for you.
     </p>
 
-    <p>
+  <p>
       May your birthday be full of happiness, love, and joy 🍰✨
     </p>
 
-    <p>
+  <p>
       Love,<br />
       <strong>Your bebe, jushle katee 💖</strong>
     </p>
 
-    <div class="decor">💜🌸🦋💖🦋🌸💜</div>
+  <div class="decor">💜🌸🦋💖🦋🌸💜</div>
   </div>
 
   <script>
