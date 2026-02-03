@@ -374,6 +374,100 @@
       100% { opacity: 1; transform: scale(1); }
     }
 
+    /* ZOOM CONTROLS */
+    .zoom-controls {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      display: flex;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 10px;
+      border-radius: 50px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(157, 78, 221, 0.3);
+    }
+
+    .zoom-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background: linear-gradient(135deg, #9d4edd, #7b2cbf);
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .zoom-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 10px rgba(157, 78, 221, 0.4);
+    }
+
+    .zoom-btn:active {
+      transform: scale(0.95);
+    }
+
+    .zoom-reset {
+      background: linear-gradient(135deg, #7b2cbf, #5a189a);
+      font-size: 16px;
+      width: 60px;
+    }
+
+    /* TEXT SIZE CONTROLS */
+    .text-controls {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+      display: flex;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 10px;
+      border-radius: 50px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(157, 78, 221, 0.3);
+    }
+
+    .text-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background: linear-gradient(135deg, #00ffff, #0080ff);
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .text-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 10px rgba(0,128,255,0.4);
+    }
+
+    .text-btn:active {
+      transform: scale(0.95);
+    }
+
+    .text-reset {
+      background: linear-gradient(135deg, #0080ff, #004080);
+      font-size: 14px;
+      width: 60px;
+    }
+
     /* BACK BUTTON */
     .back-btn {
       margin-top: 30px;
@@ -678,6 +772,89 @@
         }, 800); // Match animation duration
       }, 1000); // Wait 1 second before starting animation
     });
+
+    // Zoom and Text Size Controls
+    let currentZoom = 1;
+    let currentTextSize = 16;
+
+    // Zoom Controls
+    function zoomIn() {
+      if (currentZoom < 2) {
+        currentZoom += 0.1;
+        document.body.style.transform = `scale(${currentZoom})`;
+        document.body.style.transformOrigin = "top left";
+        document.body.style.width = `${100/currentZoom}%`;
+      }
+    }
+
+    function zoomOut() {
+      if (currentZoom > 0.8) {
+        currentZoom -= 0.1;
+        document.body.style.transform = `scale(${currentZoom})`;
+        document.body.style.transformOrigin = "top left";
+        document.body.style.width = `${100/currentZoom}%`;
+      }
+    }
+
+    function resetZoom() {
+      currentZoom = 1;
+      document.body.style.transform = "scale(1)";
+      document.body.style.width = "100%";
+    }
+
+    // Text Size Controls
+    function increaseTextSize() {
+      if (currentTextSize < 24) {
+        currentTextSize += 2;
+        document.querySelectorAll('p').forEach(p => {
+          p.style.fontSize = `${currentTextSize}px`;
+        });
+      }
+    }
+
+    function decreaseTextSize() {
+      if (currentTextSize > 12) {
+        currentTextSize -= 2;
+        document.querySelectorAll('p').forEach(p => {
+          p.style.fontSize = `${currentTextSize}px`;
+        });
+      }
+    }
+
+    function resetTextSize() {
+      currentTextSize = 16;
+      document.querySelectorAll('p').forEach(p => {
+        p.style.fontSize = '16px';
+      });
+    }
+
+    // Add controls to the page
+    function addControls() {
+      // Create zoom controls
+      const zoomControls = document.createElement('div');
+      zoomControls.className = 'zoom-controls';
+      zoomControls.innerHTML = `
+        <button class="zoom-btn" onclick="zoomOut()" title="Zoom Out">−</button>
+        <button class="zoom-btn zoom-reset" onclick="resetZoom()" title="Reset Zoom">Reset</button>
+        <button class="zoom-btn" onclick="zoomIn()" title="Zoom In">+</button>
+      `;
+
+      // Create text size controls
+      const textControls = document.createElement('div');
+      textControls.className = 'text-controls';
+      textControls.innerHTML = `
+        <button class="text-btn" onclick="decreaseTextSize()" title="Smaller Text">A−</button>
+        <button class="text-btn text-reset" onclick="resetTextSize()" title="Reset Text Size">A</button>
+        <button class="text-btn" onclick="increaseTextSize()" title="Larger Text">A+</button>
+      `;
+
+      // Add to body
+      document.body.appendChild(zoomControls);
+      document.body.appendChild(textControls);
+    }
+
+    // Initialize controls when page loads
+    window.addEventListener('load', addControls);
   </script>
 </head>
 <body>
